@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+    overflow-x:hidden;
+    padding:15px;
+    position:relative;
+}
+
+.container{
+    width:80%;
+    max-width:900px;
+    text-align:center;
+}
+
+.card{
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    animation:fadeUp 1s ease;
+}
+
+.photo{
+    width:220px;
+    height:220px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid #ff6b9d;
+    box-shadow:0 8px 20px rgba(255,107,157,.3);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    color:#ff4f81;
+    font-size:4rem;
+    margin:20px 0 10px;
+}
+
+.message{
+    margin-top:20px;
+    line-height:2;
+    color:#555;
+    font-size:1.1rem;
+}
+
+.btn{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f81;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,79,129,.4);
+}
+
+/* POPUP */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+    z-index:9999;
+}
+
+.popup.active{
+    display:flex;
+}
+
+.letter{
+    background:white;
+    width:100%;
+    max-width:750px;
+    max-height:85vh;
+    overflow-y:auto;
+    padding:35px;
+    border-radius:20px;
+    animation:zoom .4s ease;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.letter::-webkit-scrollbar{
+    width:8px;
+}
+
+.letter::-webkit-scrollbar-thumb{
+    background:#ff4f81;
+    border-radius:10px;
+}
+
+.letter::-webkit-scrollbar-track{
+    background:#f5f5f5;
+}
+
+.close{
+    position:sticky;
+    top:0;
+    float:right;
+    font-size:32px;
+    cursor:pointer;
+    color:#ff4f81;
+    background:white;
+    z-index:10;
+}
+
+.letter h2{
+    color:#ff4f81;
+    margin-bottom:20px;
+    font-family:'Dancing Script',cursive;
+    font-size:2.8rem;
+}
+
+.letter p{
+    color:#555;
+    line-height:1.9;
+    text-align:left;
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:#ff4f81;
+    font-size:24px;
+    animation:float linear infinite;
+}
+
+/* Animations */
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+        align-items:center;
+    }
+
+    .card{
+        padding:25px 18px;
+    }
+
+    .photo{
+        width:160px;
+        height:160px;
+    }
+
+    h1{
+        font-size:2.3rem;
+        line-height:1.2;
+    }
+
+    .message{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .btn{
+        width:100%;
+        padding:15px;
+    }
+
+    .letter{
+        padding:20px;
+        max-height:82vh;
+    }
+
+    .letter h2{
+        font-size:2rem;
+    }
+
+    .letter p{
+        font-size:.95rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+    <div class="card">
+
+        <div class="photo">
+            <img src="images/cute.jpeg" alt="Birthday Girl">
+        </div>
+
+        <h1>Advance Happy Birthday My Love ❤️</h1>
+
+        <p class="message">
+            <b>
+            ನನ್ನ ಮೇಲೆ ಮುನಿಸೇತಕೆ ನನ್ನ ಮನವೇ 🥹 <br>
+            ನಿನಗೆ ಮೊದಲೇ ನನ್ನ ಹೃದಯ ನೀಡಿರುವೆ ❤️ <br>
+            ಜಗದ ಜಂಜಾಟಕ್ಕೆ ನಮ್ಮ ಪ್ರೀತಿ ತೋರಿಸುವ ಅವಶ್ಯಕತೆ ಬೇಡ ಒಲವೇ 🫂 <br>
+            ನಾನು ನೀನು ನಮ್ಮ ಕನಸೆಂಬ ಜಗವೇ ಸಾಕು ನನ್ನ ಪ್ರಾಣವೇ 😘
+            </b>
+        </p>
+
+        <button class="btn" onclick="openLetter()">
+            Open My Letter 💌
+        </button>
+
+    </div>
+</div>
+
+<div class="popup" id="popup">
+
+    <div class="letter">
+
+        <span class="close" onclick="closeLetter()">×</span>
+
+        <h2>To My Lucky Charm ❤️</h2>
+
+        <p>
+            Advance Happy Birthday, my love. ❤️<br><br>
+
+            Before your special day begins, I want to tell you something from the deepest part of my heart. I know I hurt you, and I know my mistakes caused you pain. Every day, I regret what happened because losing your smile hurts me more than anything. I am truly sorry for everything, and I promise I will never repeat the same mistakes again.
+            <br><br>
+
+            Please accept my apology and forgive me. Tomorrow is your birthday, and I wish we could leave these painful moments behind and start a new chapter together. A journey filled with love, trust, laughter, beautiful memories, and all the dreams we once shared. Just you and me, holding each other through every moment, with nothing but pure love between us.
+            <br><br>
+
+            You are not just my girlfriend; you are my lucky charm, my happiness, my peace, and the most precious person in my life. The thought of losing you breaks my heart. I don't want a future without you because every beautiful future I imagine has you in it. Please don't leave me, my love. Give me one chance to prove that I can be better, love you better, and protect what we have.
+            <br><br>
+
+            Let's build something beautiful from today onward. Let's choose understanding over fights, communication over silence, and love over everything else. I want to create countless memories with you, celebrate your victories, wipe away your tears, and stand beside you no matter what life brings.
+            <br><br>
+
+            On your birthday, my only wish is for your happiness—and if possible, a place once again in your heart. Thank you for every smile, every memory, and every moment you've given me. You make my world brighter and my heart happier.
+            <br><br>
+
+            I love you more than words can ever express, and I will keep loving you with all my heart. Happy Birthday in advance, my beautiful girl. 💖🌹✨🎂
+            <br><br>
+
+            Forever yours ❤️
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("popup").classList.add("active");
+}
+
+function closeLetter(){
+    document.getElementById("popup").classList.remove("active");
+}
+
+document.getElementById("popup").addEventListener("click",function(e){
+    if(e.target===this){
+        closeLetter();
+    }
+});
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<30;i++){
+    let h=document.createElement("span");
+
+    h.innerHTML="❤";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDelay=Math.random()*8+"s";
+    h.style.animationDuration=(6+Math.random()*8)+"s";
+
+    hearts.appendChild(h);
+}
+</script>
+
+</body>
+</html>
